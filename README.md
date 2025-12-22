@@ -13,7 +13,7 @@ Work-in-progress benchmark &amp; evaluation suite for multimodal/generative medi
 - Metrics plan: `metrics/metrics_plan.md`
 - Dry run report: reporting/run_report_2025-12-18.md
 - Dry run scoring sheet: reporting/scoring_sheet_example.csv
-- 
+
 ## What a run produces
 - Overall + per-task win-rates (pairwise preference)
 - Rubric dimension scores (adherence, temporal, identity, realism, edit precision)
