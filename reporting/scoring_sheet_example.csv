@@ -1,0 +1,13 @@
+sample_id,task_id,prompt_id,model_a,model_b,winner,adherence_1to5,temporal_1to5,identity_1to5,realism_1to5,edit_precision_1to5,primary_tag,secondary_tags,notes,rater_id
+s001,T1,1,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s002,T1,2,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s003,T2,7,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s004,T2,9,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s005,T3,12,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s006,T3,14,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s007,T4,16,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s008,T4,17,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s009,T5,21,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s010,T5,22,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s011,T6,25,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
+s012,T6,26,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,TBD,,Dry run row created; awaiting outputs,rater_01
