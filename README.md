@@ -5,8 +5,63 @@ Work-in-progress benchmark & evaluation suite for multimodal / generative media 
 **Last updated:** Dec 22, 2025
 
 ## Progress log
-- **Day 1:** defined benchmark scope + failure taxonomy; drafted v0.1 tasks; created human rubric, evaluation protocol, and metrics plan; added prompt set v0.1 (36 prompts) + reporting artifacts + quickstart.
-- **Next 48 hours:** expand to v0.2 (harder prompts), add rater QA examples + calibration prompts, and attach real model outputs for a fully populated run report.
+### 2025-12-18 — v0.1 initialized
+- Defined benchmark scope + failure taxonomy
+- Drafted v0.1 task set and task catalog
+- Wrote human rubric + evaluation protocol + metrics plan
+- Added prompt set v0.1 (36 prompts)
+- Added reporting artifacts (one-page template, scoring sheet templates)
+- Added quickstart for running an end-to-end eval workflow
+
+### 2025-12-22 — pipeline validated + first “gold run” started (12 prompts)
+**Environment + repo setup**
+- Downloaded repo locally and fixed path issues by running commands from repo root (instead of `C:\Users\Anvit`)
+- Confirmed scripts run end-to-end from the correct working directory
+
+**Run artifact generation (prepare_run.py)**
+- Generated a 12-sample run manifest + scoring sheet successfully:
+  - `runs/2025-12-22/prompt_manifest.csv`
+  - `runs/2025-12-22/scoring_sheet.csv`
+- Verified the manifest contains prompt_text entries for:
+  - T1 prompts 1–6
+  - T2 prompts 7–11
+  - T3 prompt 12
+- Verified scoring sheet includes sample IDs `s001` → `s012`
+
+**Aggregation script validation (aggregate_scores.py)**
+- Ran aggregation on the example scoring sheet:
+  - `python scripts/aggregate_scores.py --scores reporting/scoring_sheet_example.csv`
+- Confirmed script prints:
+  - overall winner counts
+  - per-task winner counts
+  - tag distribution
+  - dry-run note when values are `TBD`
+
+**First real model comparison (Runway vs Luma)**
+- Selected evaluation pair:
+  - Model A: `runway_gen3`
+  - Model B: `luma_dream_machine`
+- Completed sample `s001` with **image + prompt conditioning**
+  - Generated reference image (16:9, photoreal constraints)
+  - Generated video outputs from both tools
+  - Noted free-tier watermark constraint
+  - Observed: Runway continued the input image; Luma followed the prompt but did not preserve/continue the input image (prompt-only behavior)
+
+**Manual scoring completed**
+- Filled `runs/2025-12-22/scoring_sheet.csv` for `s001` including:
+  - winner (model_a)
+  - rubric scores (adherence/temporal/identity/realism/edit_precision)
+  - primary_tag + secondary_tags
+  - notes including: watermark_free_tier and image_conditioning_failed_luma
+  - rater_id: `anvith_1`
+
+**Status**
+- ✅ Run scaffolding complete (manifest + scoring sheet generated)
+- ✅ Aggregation script verified on example sheet
+- ✅ Real evaluation started: `s001` fully executed and scored
+- 🔜 Next: complete `s002–s012` outputs + scoring, then aggregate real results:
+  - `python scripts/aggregate_scores.py --scores runs/2025-12-22/scoring_sheet.csv`
+
 
 ## Repo map (start here)
 - **Tasks:** `tasks/task_catalog.md`
